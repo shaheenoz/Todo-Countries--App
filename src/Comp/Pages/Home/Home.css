@@ -1,0 +1,29 @@
+/* Home.css */
+.home-container {
+  height: 92.4vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #add8e6 50%, #002147 50%), 
+              linear-gradient(45deg, #add8e6 50%, #002147 50%);
+  background-size: 100% 100%;
+  background-blend-mode: screen;
+  text-align: center;
+}
+
+.home-h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333333fa;
+  
+}
+
+.home-p {
+  font-size: 1.25rem;
+  color: #666;
+  border-radius: 2px;
+  background-color: transparent;
+  width: 500px;
+}

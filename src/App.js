@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Countries from './Comp/Pages/CountryPage/Countries';
+import Todo from './Comp/Pages/Todo/Todo';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Navbar from './Comp/Common/Navbar';
+import Footer from './Comp/Common/Footer';
+import Home from './Comp/Pages/Home/Home';
+import Notfound from './Comp/Pages/Notfound/Notfound';
 
 function App() {
+  const [show,setShow]=useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      
+     <BrowserRouter>
+      <Navbar/>
+
+    <Routes>
+      <Route path='/todo' element={<Todo/>}/>
+      <Route path='/countries' element={<Countries/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='*' element={<Notfound/>}/>
+      
+    </Routes>
+    <Footer/>
+
+    </BrowserRouter>
+    
+     
+    
     </div>
+
+        //  {boxtype==='Todo' ? <Countries showCountry={show}/> : <Todo showTodo={show}/> }
   );
 }
 

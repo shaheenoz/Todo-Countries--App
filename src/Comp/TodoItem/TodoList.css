@@ -1,0 +1,52 @@
+.todo-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.todo-list button{
+    width: 50px;
+    height: 20px;
+    border-radius: 15px;
+    border: none;  
+    gap: 1px;
+    background-color: rgb(165, 0, 165);
+    font-size: 10px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 2px;
+
+}
+.todo-list .label{
+    border: 1px solid black;
+    padding-inline: 5px;
+    
+ }
+.done-lable{
+    color: green;
+    text-decoration: line-through;
+}
+p{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    color: rgb(35, 35, 35);
+    border: 1px solid white;
+    margin: 8px;
+    border-radius: 15px;
+    height: auto;
+    max-height: 500px;
+    max-width: 250px;
+    overflow: auto;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.todo-list button:hover{
+    transform: scale(0.97);
+}
+
+.todo-list button:active{
+    background-color: rgba(165, 0, 165, 0.6);
+}
